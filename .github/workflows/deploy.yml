@@ -19,7 +19,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-27-231-35.ap-southeast-2.compute.amazonaws.com << 'EOF'
           cd /var/www/cicd
-          git pull origin main
+          sudo git pull origin main
           # Restart Nginx or any other service if needed
           sudo systemctl restart nginx
           EOF
